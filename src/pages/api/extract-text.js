@@ -15,9 +15,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    const result = await Tesseract.recognize(base64, 'eng');
-    res.status(200).json({ text: result.data.text });
+    
+    return res.status(200).json({ text: "Post Success" });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    return res.status(500).json({ error: err.message });
   }
 }
